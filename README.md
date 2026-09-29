@@ -21,7 +21,7 @@ O projeto vem **sem nenhuma marca**. Você configura o nome da empresa, o públi
 **1. Use este repositório como modelo** (botão *Use this template* no GitHub) ou clone-o numa pasta fora do OneDrive (o OneDrive pode corromper a pasta `.git`):
 
 ```bash
-git clone <URL-DO-SEU-REPOSITORIO>
+git clone https://github.com/MatheusXavier1/BlogsCode.git
 ```
 
 **2. Crie a sua chave do Pexels** em pexels.com/api e salve, só com a chave e sem espaços, em:
