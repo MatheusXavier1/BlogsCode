@@ -4,7 +4,7 @@ Modelo de projeto para produzir posts de blog com o [Claude Code](https://claude
 
 Você informa o tema. O Claude gera outline, texto, imagens, schema, checagem de SEO e de fatos, e sobe o post como **rascunho**. A publicação final é sempre manual.
 
-O projeto vem **sem nenhuma marca**. Você configura o nome da empresa, o público, o tom de voz e as regras editoriais uma vez (com o comando `/configurar`), e a partir daí todos os comandos seguem a sua configuração. Os textos e os comandos estão em português do Brasil, mas dá para trabalhar em outro idioma: defina o idioma no `CLAUDE.md`.
+O projeto vem **sem nenhuma marca**. Você configura o nome da empresa, o público, o tom de voz e as regras editoriais uma vez (com o comando `/iniciar`), e a partir daí todos os comandos seguem a sua configuração. Os textos e os comandos estão em português do Brasil, mas dá para trabalhar em outro idioma: defina o idioma no `CLAUDE.md`.
 
 ## O que você precisa
 
@@ -41,13 +41,13 @@ Essa pasta está no `.gitignore`. Cada pessoa usa a própria chave, e ela nunca 
 
 **4. Conecte o WordPress** seguindo a seção [Conectar ao WordPress (Jetpack)](#conectar-ao-wordpress-jetpack). As credenciais ficam com você, nunca em arquivos do projeto.
 
-**5. Abra a pasta no Claude Code e configure a sua marca:**
+**5. Abra a pasta no Claude Code e rode o comando de iniciação:**
 
 ```
-/configurar
+/iniciar
 ```
 
-O Claude pergunta sobre a sua empresa, o público, as regras editoriais, as categorias e o tom de voz, e preenche `CLAUDE.md`, `BRAND.md` e `VOICE.md`. Se preferir, edite os três à mão: todo campo a preencher aparece como `{{...}}`.
+O Claude confere os pré-requisitos (chave do Pexels, plugin e WordPress), conecta o seu site, lê o `blog_id` e as categorias, e pergunta sobre a sua empresa, o público, as regras editoriais, as categorias e o tom de voz, e preenche `CLAUDE.md`, `BRAND.md` e `VOICE.md`. Se preferir, edite os três à mão: todo campo a preencher aparece como `{{...}}`.
 
 **6. Planeje um mês de temas e produza o primeiro post:**
 
@@ -71,7 +71,8 @@ O Claude pergunta sobre a sua empresa, o público, as regras editoriais, as cate
 
 | Comando | O que faz |
 |---|---|
-| `/configurar` | Personaliza o projeto para a sua marca, por perguntas |
+| `/iniciar` | Primeiro uso: confere os pré-requisitos, conecta o WordPress e configura a marca |
+| `/configurar` | Reajusta só a marca (`CLAUDE.md`, `BRAND.md`, `VOICE.md`), por perguntas |
 | `/calendario <nicho> [mensal\|trimestral]` | Gera `calendario-editorial.md` |
 | `/post "<tópico>"` | Pipeline completo: outline, texto, 4 imagens, SEO, schema, fact-check e rascunho no WordPress |
 | `/case <slug>` | Cria um case de portfólio a partir de um brief e sobe como rascunho (opcional; veja [Portfólio](#portfólio-cases)) |
@@ -91,7 +92,7 @@ published/<slug>/          Posts já publicados, com o slug real do WordPress
 portfolio/_modelo/         Modelo de case (case.html) e de brief (brief.md)
 portfolio/<slug>/          Cases em produção (o status fica em PUBLICACOES.md)
 vendor/claude-blog/        Cópia do plugin claude-blog
-.claude/commands/          Comandos /configurar, /post, /calendario e /case
+.claude/commands/          Comandos /iniciar, /configurar, /post, /calendario e /case
 .claude/skills/            Auditoria SEO + GEO
 ```
 

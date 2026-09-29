@@ -5,7 +5,7 @@ argument-hint: <slug-do-case>
 
 Você vai produzir um case de portfólio da marca configurada no `CLAUDE.md`. Slug informado pelo usuário: $ARGUMENTS
 
-**Configuração da marca:** leia a tabela "Configuração da marca" e a seção "Regras de escrita" do `CLAUDE.md`. Se ainda houver `{{...}}` nesses campos, **pare** e peça ao usuário para rodar `/configurar`.
+**Configuração da marca:** leia a tabela "Configuração da marca" e a seção "Regras de escrita" do `CLAUDE.md`. Se ainda houver `{{...}}` nesses campos, **pare** e peça ao usuário para rodar `/iniciar`.
 
 Antes de começar, leia `BRAND.md`, `VOICE.md`, `PUBLICACOES.md` (seção Portfólio) e `portfolio/_modelo/case.html`.
 

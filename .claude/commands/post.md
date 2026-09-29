@@ -5,7 +5,7 @@ argument-hint: <tópico ou palavra-chave>
 
 Você vai produzir um post de blog completo para publicação no WordPress, usando a skill `claude-blog`. Tópico/palavra-chave fornecido pelo usuário: $ARGUMENTS
 
-**Configuração da marca:** leia a tabela "Configuração da marca" e a seção "Regras de escrita" do `CLAUDE.md`. Se ainda houver `{{...}}` nesses campos, **pare** e peça ao usuário para rodar `/configurar`.
+**Configuração da marca:** leia a tabela "Configuração da marca" e a seção "Regras de escrita" do `CLAUDE.md`. Se ainda houver `{{...}}` nesses campos, **pare** e peça ao usuário para rodar `/iniciar`.
 
 Antes de começar, leia `BRAND.md` e `VOICE.md` na raiz do projeto (se existirem) para posicionamento, público e tom de voz. Leia também `PUBLICACOES.md`: **links internos só podem apontar para posts da tabela "Blog: publicados", usando o slug real dela**. Posts que existem apenas em `posts/` (não publicados) não podem ser linkados, porque a URL ainda não existe.
 

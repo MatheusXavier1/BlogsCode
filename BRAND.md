@@ -1,6 +1,6 @@
 # Brand Context
 
-> Modelo. Preencha cada `{{...}}` ou rode `/configurar`. Este arquivo é lido automaticamente pelas sub-skills do `claude-blog` e pelos comandos do projeto. Pode apagar as instruções em itálico depois de preencher.
+> Modelo. Preencha cada `{{...}}` ou rode `/iniciar` (ou `/configurar`). Este arquivo é lido automaticamente pelas sub-skills do `claude-blog` e pelos comandos do projeto. Pode apagar as instruções em itálico depois de preencher.
 
 ## Audience
 

@@ -1,6 +1,6 @@
 # Voice Context
 
-> Modelo. Ajuste cada item ao tom da sua marca ou rode `/configurar`. Este arquivo é lido automaticamente pelas sub-skills do `claude-blog` e pelos comandos do projeto. Os valores abaixo são um padrão razoável para conteúdo B2B.
+> Modelo. Ajuste cada item ao tom da sua marca ou rode `/iniciar` (ou `/configurar`). Este arquivo é lido automaticamente pelas sub-skills do `claude-blog` e pelos comandos do projeto. Os valores abaixo são um padrão razoável para conteúdo B2B.
 
 ## Pronoun stance
 {{Primeira pessoa ("nossa equipe"), segunda pessoa ("você"), terceira pessoa, ou misto}}

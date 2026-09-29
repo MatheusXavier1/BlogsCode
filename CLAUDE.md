@@ -2,7 +2,7 @@
 
 Projeto de produção de posts de blog, do planejamento até o rascunho no WordPress. Os textos são escritos em **{{IDIOMA, ex.: português do Brasil}}**.
 
-> **Primeiro uso:** este arquivo tem campos `{{...}}`. Rode `/configurar` para o Claude preencher este arquivo, o `BRAND.md` e o `VOICE.md` com você, ou edite à mão. Enquanto houver `{{...}}`, os comandos `/post` e `/case` pedem para você configurar antes.
+> **Primeiro uso:** este arquivo tem campos `{{...}}`. Rode `/iniciar`: ele confere os pré-requisitos, conecta o WordPress e preenche este arquivo, o `BRAND.md` e o `VOICE.md` com você, ou edite à mão. Enquanto houver `{{...}}`, os comandos `/post` e `/case` pedem para você configurar antes.
 
 ## Configuração da marca
 Os comandos leem estes valores. Mude aqui, não nos comandos.
@@ -24,7 +24,8 @@ Os comandos leem estes valores. Mude aqui, não nos comandos.
 - `MANUAL-WORKFLOW.md`: passo a passo completo.
 
 ## Comandos do projeto
-- `/configurar`: preenche este arquivo, `BRAND.md` e `VOICE.md` com você, por perguntas.
+- `/iniciar`: primeiro uso. Confere os pré-requisitos (chave do Pexels, plugin, WordPress), conecta o site e configura a marca.
+- `/configurar`: preenche ou reajusta este arquivo, `BRAND.md` e `VOICE.md`, por perguntas.
 - `/calendario <nicho> [mensal|trimestral]`: gera `calendario-editorial.md`.
 - `/post "<tópico>"`: pipeline de 10 etapas, do outline ao rascunho no WordPress (`.claude/commands/post.md`). É a fonte da verdade do processo; não duplique as etapas aqui.
 - `/case <slug>`: cria um case de portfólio a partir de `portfolio/<slug>/brief.md` e sobe como rascunho. Nunca inventa números nem cliente, e exige a autorização do cliente no brief. Só faz sentido se o site tiver o tipo de conteúdo Portfolio.

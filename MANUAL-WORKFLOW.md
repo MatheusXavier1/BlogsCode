@@ -6,7 +6,7 @@ Este manual explica como produzir posts de blog do zero até o rascunho no WordP
 
 ## 0. Configuração inicial (uma vez)
 
-1. Rode `/configurar` no Claude Code. Ele pergunta sobre a sua marca, o seu público, as regras editoriais e o tom de voz, e preenche `CLAUDE.md`, `BRAND.md` e `VOICE.md`. Se preferir, edite os três arquivos à mão: todo campo a preencher aparece como `{{...}}`.
+1. Rode `/iniciar` no Claude Code. Ele confere os pré-requisitos, conecta o WordPress e pergunta sobre a sua marca, o seu público, as regras editoriais e o tom de voz, e preenche `CLAUDE.md`, `BRAND.md` e `VOICE.md`. Se preferir, edite os três arquivos à mão: todo campo a preencher aparece como `{{...}}`.
 2. Salve a chave do Pexels em `.claude/config/pexels_api_key.txt`.
 3. Instale o plugin `claude-blog` e conecte o WordPress (veja o README).
 
@@ -18,7 +18,8 @@ Enquanto restar algum `{{...}}` nos campos de marca do `CLAUDE.md`, os comandos 
 
 | Comando | Para que serve | Resultado |
 |---|---|---|
-| `/configurar` | Personalizar o projeto para a sua marca | `CLAUDE.md`, `BRAND.md`, `VOICE.md` preenchidos |
+| `/iniciar` | Primeiro uso: pré-requisitos, WordPress e marca | Projeto pronto para o primeiro `/post` |
+| `/configurar` | Reajustar a marca depois | `CLAUDE.md`, `BRAND.md`, `VOICE.md` atualizados |
 | `/calendario <nicho> [mensal\|trimestral]` | Planejar os temas do período | `calendario-editorial.md` na raiz |
 | `/post "<título ou palavra-chave>"` | Produzir um post completo | Pasta `posts/<slug>/` + rascunho no WordPress |
 | `/case <slug>` | Produzir um case de portfólio (opcional) | `portfolio/<slug>/` + rascunho no WordPress |
@@ -26,7 +27,7 @@ Enquanto restar algum `{{...}}` nos campos de marca do `CLAUDE.md`, os comandos 
 Fluxo recomendado:
 
 ```
-/configurar  →  /calendario  →  escolher tema  →  /post  →  revisar rascunho  →  publicar (manual)  →  mover para published/
+/iniciar  →  /calendario  →  escolher tema  →  /post  →  revisar rascunho  →  publicar (manual)  →  mover para published/
 ```
 
 ---
@@ -48,7 +49,7 @@ Fluxo recomendado:
 ├── PUBLICACOES.md             Registro do que está no ar e dos rascunhos
 ├── portfolio/                 Cases: _modelo/ e <slug>/ (comando /case)
 └── .claude/
-    ├── commands/              configurar.md, post.md, calendario.md e case.md
+    ├── commands/              iniciar.md, configurar.md, post.md, calendario.md e case.md
     ├── skills/seo-geo-blog-optimizer/   Auditoria SEO + GEO
     └── config/pexels_api_key.txt        Chave da API de imagens (não versionada)
 ```
@@ -158,7 +159,7 @@ O passo 10 não consegue preencher tudo. Confira no WordPress:
 
 | Situação | O que fazer |
 |---|---|
-| O `/post` pede para rodar `/configurar` | Ainda há `{{...}}` na configuração da marca do `CLAUDE.md` |
+| O `/post` pede para rodar `/iniciar` | Ainda há `{{...}}` na configuração da marca do `CLAUDE.md` |
 | Uma imagem não veio do Pexels | O workflow tenta uma query mais genérica; se falhar, deixa placeholder e avisa no resumo quais faltaram |
 | Densidade da PC baixa | Editar frases do **corpo** do texto. Mexer só em alt ou meta não adianta |
 | Estatística sem fonte verificável | É removida no fact-check. Nada é inventado |
@@ -188,7 +189,7 @@ Para otimizar um texto colado ou existente, peça: *"otimize este post para SEO 
 
 ## 9. Resumo rápido
 
-1. `/configurar`: uma vez, para a sua marca.
+1. `/iniciar`: uma vez, para configurar tudo.
 2. `/calendario "<nicho>" trimestral`: define os temas.
 3. `/post "<tema>"`: gera tudo, incluindo o rascunho no WordPress.
 4. Leia o resumo final: arquivos, créditos das imagens, diagnóstico SEO-GEO, nota e pendências.
