@@ -1,0 +1,17 @@
+# Segredos e configuração local (cada pessoa usa a própria)
+.claude/config/
+.claude/settings.local.json
+.env
+.env.*
+
+# Arquivos compactados e temporários
+*.zip
+*.tmp
+~$*
+
+# Sistema operacional / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

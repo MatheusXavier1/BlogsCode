@@ -1,0 +1,142 @@
+<!-- wp:html -->
+<style>
+#blog-case{--accent:#F58330;--accent-rgb:245,131,48;--accent-dark:#E6711C;--accent-light:rgba(var(--accent-rgb),.12);--cream:#F4EEE7;--off:#FAFAFA;--dark:#2A2724;--mid:#615D59;--border:#E5E7EB;--green:#059669;font-family:Montserrat,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--dark);line-height:1.65;max-width:1120px;margin:0 auto;padding:0 20px}
+#blog-case *,#blog-case *::before,#blog-case *::after{box-sizing:border-box}
+#blog-case h2,#blog-case h3,#blog-case p,#blog-case ul,#blog-case ol{margin:0;padding:0}
+#blog-case ul,#blog-case ol{list-style:none}
+#blog-case .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+#blog-case .eyebrow::after{content:"";width:14px;height:2px;background:var(--accent);border-radius:2px}
+#blog-case h2{font-size:clamp(22px,2.4vw,30px);font-weight:500;line-height:1.2;letter-spacing:-.5px;margin-bottom:16px}
+#blog-case p{font-size:16px;color:var(--mid);margin-bottom:14px}
+#blog-case p:last-child{margin-bottom:0}
+#blog-case .lead{background:var(--cream);border-radius:20px;padding:32px 36px;margin:8px 0 24px}
+#blog-case .lead p{font-size:17px;color:var(--dark);line-height:1.7}
+#blog-case .lead strong{color:var(--accent-dark);font-weight:500}
+#blog-case .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:56px}
+#blog-case .stat{background:#fff;border:1px solid var(--border);border-radius:16px;padding:22px 20px;border-top:3px solid var(--accent)}
+#blog-case .stat b{display:block;font-size:24px;font-weight:500;letter-spacing:-.5px;color:var(--dark);line-height:1.15;margin-bottom:6px}
+#blog-case .stat span{font-size:13px;color:var(--mid);line-height:1.4}
+#blog-case .layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:56px;align-items:start}
+#blog-case .block{margin-bottom:56px}
+#blog-case .steps li{display:flex;gap:18px;padding-bottom:26px;position:relative}
+#blog-case .steps li:last-child{padding-bottom:0}
+#blog-case .steps li:not(:last-child)::before{content:"";position:absolute;left:21px;top:46px;bottom:4px;width:2px;background:linear-gradient(to bottom,rgba(var(--accent-rgb),.35),transparent)}
+#blog-case .num{width:44px;height:44px;border-radius:12px;background:var(--accent);color:#fff;font-size:13px;font-weight:500;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+#blog-case .steps h3{font-size:16px;font-weight:500;margin:8px 0 4px;letter-spacing:-.2px}
+#blog-case .steps p{font-size:14.5px}
+#blog-case .checks{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#blog-case .checks li{display:flex;gap:12px;align-items:flex-start;background:var(--off);border:1px solid var(--border);border-radius:14px;padding:14px 16px;font-size:14.5px;color:var(--dark);line-height:1.45}
+#blog-case .checks li::before{content:"";width:20px;height:20px;border-radius:6px;background:rgba(5,150,105,.12) url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23059669' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='3 8 7 12 13 4'/%3E%3C/svg%3E") center/12px no-repeat;flex-shrink:0;margin-top:1px}
+#blog-case .result{background:var(--cream);border-radius:20px;padding:32px 36px;position:relative;overflow:hidden}
+#blog-case .result::before{content:"";position:absolute;bottom:-90px;right:-90px;width:280px;height:280px;background:radial-gradient(circle,rgba(var(--accent-rgb),.2) 0%,transparent 70%);pointer-events:none}
+#blog-case .result p{color:var(--dark);position:relative}
+#blog-case .result a{color:var(--accent-dark);font-weight:500;text-decoration:none;border-bottom:2px solid var(--accent)}
+#blog-case aside{position:sticky;top:24px}
+#blog-case .card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:26px 24px;box-shadow:0 12px 40px rgba(42,39,36,.06);border-top:3px solid var(--accent)}
+#blog-case .card h2{font-size:17px;margin-bottom:14px}
+#blog-case .card dl{margin:0}
+#blog-case .card dt{font-size:10.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-dark);margin-top:14px}
+#blog-case .card dt:first-child{margin-top:0}
+#blog-case .card dd{margin:2px 0 0;font-size:14.5px;color:var(--dark);line-height:1.5}
+#blog-case .faq details{border:1px solid var(--border);border-radius:14px;margin-bottom:12px;background:#fff}
+#blog-case .faq summary{cursor:pointer;list-style:none;padding:18px 22px;font-size:15.5px;font-weight:500;color:var(--dark);display:flex;justify-content:space-between;gap:16px;align-items:center}
+#blog-case .faq summary::-webkit-details-marker{display:none}
+#blog-case .faq summary::after{content:"+";font-size:22px;line-height:1;color:var(--accent);flex-shrink:0}
+#blog-case .faq details[open] summary::after{content:"\2212"}
+#blog-case .faq details p{padding:0 22px 20px;font-size:14.5px}
+#blog-case .cta{background:var(--accent-dark);border-radius:28px;padding:56px 48px;text-align:center;margin:24px 0 64px;position:relative;overflow:hidden}
+#blog-case .cta::before{content:"";position:absolute;top:-100px;right:-100px;width:380px;height:380px;background:radial-gradient(circle,rgba(255,255,255,.12) 0%,transparent 70%);pointer-events:none}
+#blog-case .cta h2{color:#fff;margin-bottom:10px;position:relative}
+#blog-case .cta p{color:rgba(255,255,255,.85);margin-bottom:28px;position:relative}
+#blog-case .cta a{display:inline-block;background:#FFF7F0;color:var(--accent-dark);font-size:15px;font-weight:500;padding:16px 36px;border-radius:100px;text-decoration:none;position:relative}
+#blog-case .cta a:hover{background:#fff}
+@media(max-width:900px){#blog-case .layout{grid-template-columns:1fr;gap:40px}#blog-case aside{position:static;order:-1}#blog-case .stats{grid-template-columns:1fr 1fr}#blog-case .checks{grid-template-columns:1fr}#blog-case .lead,#blog-case .result{padding:24px 22px}#blog-case .cta{padding:40px 22px}}
+</style>
+<div id="blog-case">
+
+<!-- RESUMO: 2-3 frases com o resultado principal em <strong>. Só números do brief.md. -->
+<div class="lead">
+<p>{{RESUMO_COM_<strong>RESULTADO</strong>}}</p>
+</div>
+
+<!-- NÚMEROS: 4 cards. Use só números que existam no brief.md. Se houver menos de 4, use resultados qualitativos reais. -->
+<div class="stats">
+<div class="stat"><b>{{NUMERO_1}}</b><span>{{LEGENDA_1}}</span></div>
+<div class="stat"><b>{{NUMERO_2}}</b><span>{{LEGENDA_2}}</span></div>
+<div class="stat"><b>{{NUMERO_3}}</b><span>{{LEGENDA_3}}</span></div>
+<div class="stat"><b>{{NUMERO_4}}</b><span>{{LEGENDA_4}}</span></div>
+</div>
+
+<div class="layout">
+<div class="main">
+
+<section class="block">
+<p class="eyebrow">O desafio</p>
+<h2>{{H2_DESAFIO, pergunta com a palavra-chave}}</h2>
+<p>{{CONTEXTO_DO_CLIENTE_E_DO_PROBLEMA}}</p>
+<p>{{O_QUE_NAO_PODIA_SER_ALTERADO}}</p>
+</section>
+
+<section class="block">
+<p class="eyebrow">O método</p>
+<h2>{{H2_METODO}}</h2>
+<ol class="steps">
+<li><div class="num">01</div><div><h3>{{ETAPA_1}}</h3><p>{{DESCRICAO_1}}</p></div></li>
+<li><div class="num">02</div><div><h3>{{ETAPA_2}}</h3><p>{{DESCRICAO_2}}</p></div></li>
+<li><div class="num">03</div><div><h3>{{ETAPA_3}}</h3><p>{{DESCRICAO_3}}</p></div></li>
+<li><div class="num">04</div><div><h3>{{ETAPA_4}}</h3><p>{{DESCRICAO_4}}</p></div></li>
+</ol>
+</section>
+
+<section class="block">
+<p class="eyebrow">Entregas</p>
+<h2>O que foi desenvolvido</h2>
+<ul class="checks">
+<li>{{ENTREGA_1}}</li>
+<li>{{ENTREGA_2}}</li>
+<li>{{ENTREGA_3}}</li>
+<li>{{ENTREGA_4}}</li>
+</ul>
+</section>
+
+<section class="block">
+<p class="eyebrow">O resultado</p>
+<h2>{{H2_RESULTADO}}</h2>
+<div class="result">
+<p>{{RESULTADO_COM_NUMEROS_DO_BRIEF}}</p>
+<p>Conheça nosso serviço de <a href="{{URL_DA_PAGINA_DE_SERVICO}}">{{NOME_DO_SERVICO}}</a>.</p>
+</div>
+</section>
+
+</div>
+
+<aside>
+<div class="card">
+<h2>Ficha técnica</h2>
+<dl>
+<dt>Cliente</dt><dd>{{CLIENTE, ou "Empresa do setor X" se o nome não puder ser divulgado}}</dd>
+<dt>Setor</dt><dd>{{SETOR}}</dd>
+<dt>Linha</dt><dd>{{LINHA_DE_SERVICO, ou remova esta linha}}</dd>
+<dt>Serviço</dt><dd>{{SERVICO}}</dd>
+</dl>
+</div>
+</aside>
+</div>
+
+<section class="block faq">
+<p class="eyebrow">Dúvidas</p>
+<h2>Perguntas frequentes</h2>
+<details><summary>{{PERGUNTA_1}}</summary><p>{{RESPOSTA_1}}</p></details>
+<details><summary>{{PERGUNTA_2}}</summary><p>{{RESPOSTA_2}}</p></details>
+<details><summary>{{PERGUNTA_3}}</summary><p>{{RESPOSTA_3}}</p></details>
+</section>
+
+<div class="cta">
+<h2>{{CHAMADA}}</h2>
+<p>{{SUBTITULO}}</p>
+<a href="/contato">{{TEXTO_DO_BOTAO}}</a>
+</div>
+
+</div>
+
+<!-- /wp:html -->
